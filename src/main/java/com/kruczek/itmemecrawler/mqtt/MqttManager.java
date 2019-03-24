@@ -16,13 +16,15 @@ public class MqttManager {
     @Value("${mqtt.pass}")
     private String pass;
 
+    @Value("${mqtt.topic}")
+    private String topic;
+
+    @Value("${mqtt.broker.url}")
+    private String broker;
+
     public void sendTestMessage() {
-        String topic = "/meme/it";
         String content = "url:test.test/url.jpg";
-        String broker = "tcp://mqtt.lucysan.net:1883";
         String clientId = "Meme test";
-
-
 
         try {
             MqttClient sampleClient = new MqttClient(broker, clientId);
