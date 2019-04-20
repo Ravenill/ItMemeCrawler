@@ -14,7 +14,5 @@ public class ItMemeCrawlerApplication {
         System.out.println("Sending test message");
         service.sendTestMessage();
         System.out.println("Exiting app");
-
     }
-
 }
